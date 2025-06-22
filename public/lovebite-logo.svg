@@ -1,0 +1,43 @@
+<svg width="150" height="150" viewBox="0 0 150 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .dog-body { fill: #8D6E63; }
+    .cat-body { fill: #EC407A; }
+    .heart-accent { fill: #F06292; }
+    .ekg-line { stroke: #E91E63; }
+    .heart-beat-animation {
+      animation: heart-beat 1.5s infinite ease-in-out;
+      transform-origin: center;
+    }
+    @keyframes heart-beat {
+      0%, 100% { transform: scale(1); }
+      10% { transform: scale(1.03); }
+      20% { transform: scale(1); }
+      30% { transform: scale(1.06); }
+      40% { transform: scale(1); }
+    }
+    .floating-hearts-animation {
+      animation: float-up 4s infinite ease-in-out;
+    }
+    @keyframes float-up {
+      0%, 100% { transform: translateY(0) scale(1); opacity: 1; }
+      50% { transform: translateY(-10px) scale(1.1); opacity: 0.6; }
+    }
+  </style>
+  <circle cx="75" cy="75" r="72" fill="white"/>
+  <g className="heart-beat-animation">
+    <path d="M75 45 C 40 20, 20 60, 45 95 L 75 125 L 105 95 C 130 60, 110 20, 75 45 Z" fill="none"/>
+    <path d="M48,118 C 20,100, 25,55, 55,45 C 58.3333,44, 61.6667,43, 65,42 L 65,110 C 60,115, 53,118, 48,118 Z" class="dog-body"/>
+    <path d="M102,118 C 130,100, 125,55, 95,45 C 91.6667,44, 88.3333,43, 85,42 L 85,110 C 90,115, 97,118, 102,118 Z" class="cat-body"/>
+    <path d="M65 42 C 60 35, 50 38, 50 48 C 50 58, 65 62, 65 55 Z" class="dog-body"/>
+    <path d="M85 42 C 90 35, 100 38, 100 48 C 100 58, 85 62, 85 55 Z" class="cat-body"/>
+    <path d="M98 55 C 100 53, 102 55, 102 57 L 100 58 Z" class="cat-body" />
+    <path d="M96 56 C 98 54, 100 56, 100 58 L 98 59 Z" class="cat-body" />
+    <path d="M94 57 C 96 55, 98 57, 98 59 L 96 60 Z" class="cat-body" />
+    <g class="floating-hearts-animation">
+      <path d="M75 50 a 5 5 0 0 1 10 0 a 5 5 0 0 1 -10 0" class="heart-accent" style="animation-delay: 0s;"/>
+      <path d="M90 60 a 3 3 0 0 1 6 0 a 3 3 0 0 1 -6 0" class="heart-accent" style="animation-delay: 0.5s;"/>
+      <path d="M60 65 a 4 4 0 0 1 8 0 a 4 4 0 0 1 -8 0" class="heart-accent" style="animation-delay: 1s;"/>
+    </g>
+    <path d="M40 80 C 50 75, 60 78, 65 85 L 70 90 L 75 85 L 80 90 L 85 85 C 90 78, 100 75, 110 80" stroke-width="2.5" stroke-linecap="round" fill="none" class="ekg-line"/>
+  </g>
+</svg>

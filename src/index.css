@@ -1,0 +1,92 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --lovebite-red: #C62828;
+  --lovebite-pink: #EC407A;
+  --lovebite-purple: #9C27B0;
+  --lovebite-blue: #2196F3;
+  --lovebite-yellow: #FBC02D;
+  --lovebite-green: #22c55e;
+  --lovebite-orange: #f97316;
+  --lovebite-cream: #FFF8F1;
+  --lovebite-taupe: #D7C3B3;
+  --lovebite-charcoal: #111111;
+  --lovebite-gray-dark: #1C1C1E; /* A slightly lighter dark for the main background */
+  --lovebite-gray-medium: #2C2C2E; /* For cards and secondary elements */
+  --lovebite-gray-light: #3A3A3C; /* For borders and dividers */
+  --lovebite-white: #FFFFFF;
+}
+
+@layer base {
+  :root {
+    --background: 240 2% 11%; /* #1C1C1E */
+    --foreground: 210 40% 98%;
+    --card: 240 2% 17%; /* #2C2C2E */
+    --card-foreground: 210 40% 98%;
+    --popover: 240 2% 11%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 0 66% 47%; /* #C62828 */
+    --primary-foreground: 210 40% 98%;
+    --secondary: 240 2% 22%; /* #3A3A3C */
+    --secondary-foreground: 210 40% 98%;
+    --muted: 240 2% 22%;
+    --muted-foreground: 215 20% 65%;
+    --accent: 240 2% 22%;
+    --accent-foreground: 0 66% 47%;
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 240 2% 22%; /* #3A3A3C */
+    --input: 240 2% 22%;
+    --ring: 0 66% 47%;
+    --radius: 0.75rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+  }
+}
+
+.lovebite-gradient {
+  @apply bg-gradient-to-r from-[var(--lovebite-red)] to-[var(--lovebite-pink)];
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  scrollbar-width: thin;
+  scrollbar-color: var(--lovebite-red) var(--lovebite-gray-dark);
+}
+
+body::-webkit-scrollbar {
+  width: 8px;
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--lovebite-gray-dark);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--lovebite-red);
+  border-radius: 10px;
+  border: 2px solid var(--lovebite-gray-dark);
+}
+
+.widget-card {
+  @apply bg-card border border-border rounded-xl shadow-lg;
+}
